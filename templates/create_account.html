@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+{% block body %}
+<body>
+    <div class="container">
+        <div class="account-container">
+            <h1 class="text-center mb-4">Create Account</h1>
+            <form action="{{ url_for('create_account') }}" method="post">
+                <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input type="text" class="form-control" id="username" name="username">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" class="form-control" id="password" name="password">
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Create Account</button>
+            </form>
+        </div>
+    </div>
+</body>
+{% endblock %}

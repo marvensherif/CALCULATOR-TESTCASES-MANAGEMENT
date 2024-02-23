@@ -1,0 +1,12 @@
+{% extends 'layout.html' %}
+{% block body %}
+
+    <h1>TestCase Details</h1>
+    <p>ID: {{ testcase['ID'] }}</p>
+    <p>Num1: {{ testcase['NUM1'] }}</p>
+    <p>Num2: {{ testcase['NUM2'] }}</p>
+    <p>Operation: {{ testcase['OPERATION'] }}</p>
+    <p>Result: {{ testcase['RESULT'] }}</p>
+
+    <a href="{{ url_for('index') }}" class="btn btn-primary">Home Page</a>
+{% endblock %}

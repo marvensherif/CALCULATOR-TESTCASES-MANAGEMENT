@@ -1,0 +1,28 @@
+{% extends 'layout.html' %}
+{% block body %}
+  <h3 class='text-center text-muted mb-3'>Execusion Results</h3>
+  <p class='text-right'><a href='{{url_for("index")}}' class='btn btn-success '>Back</a></p>
+  <table class='table table-bordered'>
+    <thead>
+      <th>NUM1</th>
+      <th>NUM2</th>
+      <th>Operation</th>
+      <th>RESULT</th>
+      <th>EXPECTED RESULT</th>
+      <th>STATUS</th>
+    </thead>
+    <tbody>
+      {% for row in datas %}
+        <tr>
+          <td>{{row.num1}}</td>
+          <td>{{row.num2}}</td>
+          <td>{{row.operation}}</td>
+          <td>{{row.result}}</td>
+          <th>{{row.ExpectedResult}}</th>
+          <th>{{row.Status}}</th>
+  
+        </tr>
+      {%endfor%}
+    </tbody>
+  </table>
+{% endblock %}
